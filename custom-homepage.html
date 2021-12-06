@@ -1,19 +1,165 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <section class="main">
+
+<style>
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}   
+
+.center {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.main {
+    /* background-image: url('/capa.png'); */
+    background-color: #c2f0c7;
+    padding: 70px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.main__cta{
+    width: 100%;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.main__cta h2{
+    color: #16507b;
+    font-size: 40px;
+}
+
+.main__cta p {
+    font-size: 19px;
+    font-weight: bold;
+    color: #16507b;
+    margin: 10px 0;
+}
+
+.main__cta a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #4DD65D;
+    display: inline-block;
+    padding: 8px 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+}
+
+.main__cta a:hover{
+    background-color: #3BA347;
+    color: white;
+    transition: 0.6s;
+}
+
+.diferenciais {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.diferencial-single {
+    border-radius: 8px;
+    background-color: white;
+    width:  21%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 50px 20px;
+}
+
+.diferencial-single:hover{
+    background-color: red;
+    transition: 1s;
+}
+
+.diferencial-single h2 {
+    color: #124265;
+    margin: 10px 0;
+    
+}
+
+.diferencial-single p {
+    font-size:  17px;
+    color: gray;
+    line-height: 30px;
+}
+
+section.sobre{
+    padding: 80px 0;
+}
+
+.chamada-sobre {
+    width: 100%;
+    text-align: center;
+}
+
+.chamada-sobre h2 {
+    color: #124265;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+
+.conteudo-sobre {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudo-sobre p{
+    width: 48%;
+    font-size: 14px;
+    color:  rgb(79, 99, 82);
+    margin-right: 2%;
+}
+
+section.conquistas {
+    background-color: #f8fbfe;
+    padding: 20px 0;
+}
+
+.conquista-single {
+    width: 22%;
+    margin-right: 3%;
+    text-align: center;
+    color: #124265;
+}
+
+.conquista-single h2{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .diferencial-single {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .conteudo-sobre p {
+        width: 100%;
+        margin: 20px 20px;
+    }
+}
+
+</style>
+
+<section class="main">
     <div class="center">
         <div class="main__cta">
             <h2>Primeiro Repositório de Dados Abertos da Região Norte</h2>
-            <p>Centro de Dados Abertos da Amazônia</p>
-            <button onclick="window.location.href='/dataverse/root'"> DataVerse</button>
+            <p>Dados de Pesquisas da Região Amazonica</p>
+            <a href="dataverse/root">DataVerse</a>
         </div>
         
     </div>
@@ -45,34 +191,29 @@
     <div class="center">
         <div class="chamada-sobre">
             <h2>Porque utilizar o DataVerse?</h2>
-            <p>texto</p>
+            <p>Dados Abertos constituem a publicação e disseminação de dados e informações públicas na Web, seguindo alguns critérios que possibilitam sua reutilização e o desenvolvimento de aplicativos por toda a sociedade. A maior parte dos dados e informações geradas ou mantidas pelo governo, são públicas. Disponibilizar dados na Web não é uma prática recente no governo, porém com uma política de dados abertos, o governo sinaliza que pretende padronizar e alavancar a disseminação de dados públicos por todos os órgãos. O paradigma de dados abertos está fundamentado na constatação de que o dado, quando compartilhado abertamente, tem seu valor e seu uso potencializados. Com isso o governo pretende desenvolver um ecossistema de dados e informações que beneficia a sociedade e possibilita o envolvimento de todos seus setores, inclusive a iniciativa privada, o setor acadêmico e o próprio governo.</p>
         </div>
-        <div class="conteudo-sobre">
-            <p>Texto de exemplo</p>
-        </div>
+        
     </div>
 </section>
 
 <section class="conquistas">
     <div class="center">
         <div class="conquista-single">
-            <h2>Segurança</h2>
-            <p>Dataverse</p>
+            <h2>+ 100</h2>
+            <p>Pesquisas sobre o desmatamento</p>
         </div>
         <div class="conquista-single">
-            <h2>Armazenamento</h2>
-            <p>Dataverse</p>
+            <h2>+ 30 </h2>
+            <p>Pesquisas sobre a agricutura familiar</p>
         </div>
         <div class="conquista-single">
-            <h2>Gratuito</h2>
-            <p>Dataverse</p>
+            <h2>+ 50</h2>
+            <p>Pesquisas sobe Tecnologia da informação</p>
         </div>
         <div class="conquista-single">
-            <h2>Qualidade</h2>
-            <p>Dataverse</p>
+            <h2>+ 25</h2>
+            <p>Pesquisas sobre inclusão</p>
         </div>
     </div>
 </section>
-</body>
-</html>
-
