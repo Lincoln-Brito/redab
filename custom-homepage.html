@@ -1,22 +1,20 @@
-
 <style>
-
- *{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}   
+    font-family: "Poppins", sans-serif;
+  }
 
-.center {
+  .center {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 2%;
-    /* display: flex; */
+    display: flex;
     /* flex-wrap: wrap; */
-}
+  }
 
-section.main {
+  section.main {
     /* background-image: url('/capa.png'); */
     background-color: #c2f0c7;
     padding: 30px 0;
@@ -24,34 +22,33 @@ section.main {
     background-size: cover;
     /* background-repeat: no-repeat;  */
     /* background-attachment: fixed; */
-}
+  }
 
-
-
-.main__cta{
+  .main__cta {
     width: 100%;
     margin: 60px 0;
     text-align: center;
-}
+  }
 
-.main__cta h2{
+  .main__cta h2 {
+    text-align: left;
     color: #16507b;
     font-size: 40px;
-}
+  }
 
-.main__cta p {
+  .main__cta p {
     font-size: 19px;
     font-weight: bold;
     color: #16507b;
-    margin: 10px 10px;
+    margin: 15px 10px;
     padding: 20px 10px;
-}
+  }
 
-.main__cta a{
+  .main__cta a {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-    background-color: #4DD65D;
+    background-color: #4dd65d;
     display: inline-block;
     padding: 8px 30px;
     color: white;
@@ -60,176 +57,490 @@ section.main {
     cursor: pointer;
     height: 50px;
     width: 180px;
-}
+  }
 
-.main__cta a:hover{
-    background-color: #3BA347;
+  .main__cta a:hover {
+    background-color: #3ba347;
     color: white;
     transition: 0.6s;
-}
+  }
 
-.diferenciais {
+  .diferenciais {
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
-.diferencial-single {
+  .diferencial-single {
     border-radius: 8px;
     background-color: white;
-    width:  21%;
+    height: 260px;
+    width: 21%;
     margin-right: 2%;
     margin-left: 2%;
     padding: 20px 20px;
     text-align: center;
-}
+  }
 
-.diferencial-single:hover{
+  .diferencial-single:hover {
     cursor: pointer;
     font-size: 110%;
     transition: 0.4s;
-}
+  }
 
-.diferencial-single img {
+  .diferencial-single img {
     max-width: 30%;
     max-height: 30%;
     margin: 10px;
     display: inline-flex;
-}
+  }
 
-.diferencial-single h2 {
-    
+  .diferencial-single h2 {
     color: #124265;
     margin: 10px 0;
-    
-}
+  }
 
-.diferencial-single p {
-    font-size:  17px;
+  .diferencial-single p {
+    font-size: 17px;
     color: gray;
     line-height: 30px;
-}
+  }
 
-section.sobre{
+  section.sobre {
     padding: 80px 0;
-}
+  }
 
-.chamada-sobre {
+  .chamada-sobre {
     width: 100%;
     text-align: center;
-}
+  }
 
-.chamada-sobre h2 {
+  .chamada-sobre h2 {
     color: #124265;
     text-transform: uppercase;
     margin-bottom: 5%;
-}
+  }
 
-.conteudo-sobre {
+  .conteudo-sobre {
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
-.conteudo-sobre p{
+  .conteudo-sobre p {
     width: 48%;
     font-size: 14px;
-    color:  rgb(79, 99, 82);
+    color: rgb(79, 99, 82);
     margin-right: 2%;
-}
+  }
 
-section.conquistas {
+  section.conquistas {
     background-color: #f8fbfe;
     padding: 20px 0;
-}
+  }
 
-.conquista-single {
+  .conquista-single {
     width: 22%;
     margin-right: 3%;
     text-align: center;
     color: #124265;
-}
+  }
 
-.conquista-single h2{
+  .conquista-single h2 {
     font-size: 30px;
-}
+  }
 
-@media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     .diferencial-single {
-        width: 100%;
-        margin-bottom: 20px;
+      width: 100%;
+      margin-bottom: 20px;
     }
     .conteudo-sobre p {
-        width: 100%;
-        margin: 20px 20px;
+      width: 100%;
+      margin: 20px 20px;
     }
+  }
+  /* animação */
+  .content {
+    position: absolute;
+    margin: -12px 0 0 55px;
+    transform: translate(-50%, -50%);
+    /* height: 160px; */
+    overflow: hidden;
+    font-size: 30px;
+    line-height: 40px;
+    color: #004f09;
+  }
+  .content__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 40px;
+  }
+  .content__container__text {
+    display: inline;
+    float: left;
+    margin: 0;
+  }
+  .content__container__list {
+    margin-top: 0;
+    padding-left: 110px;
+    text-align: left;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  .content__container__list__item {
+    line-height: 40px;
+    margin: 0;
+  }
+  @-webkit-keyframes opacity {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes change {
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+  @-o-keyframes opacity {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @-o-keyframes change {
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+  @-moz-keyframes opacity {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes change {
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+  @keyframes opacity {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes change {
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+
+ /* contador */
+
+ .numbers {
+  /* font-family: 'Arial', sans-serif; */
+  font-size: 30px;
+  line-height: 1em;
+  width: 15%;
+  text-align: center;
+  margin: 40px auto;
+  overflow: hidden;
+}
+.numbers__window {
+  color:#124265;
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+  width: 0.5em;
+  height: 1em;
+  margin: 0 -3;
+}
+.numbers__window__digit {
+  font: inherit;
+  word-break: break-all;
+  display: block;
+  width: 0;
+  padding: 0 0.52em 0 0;
+  margin: 0 -1;
+  overflow: inherit;
+  animation: counting 0.4s steps(10) forwards infinite;
+}
+.numbers__window__digit::before {
+  content: attr(data-fake);
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+@keyframes counting {
+  100% {
+    transform: translate3d(0, -10em, 0);
+  }
+}
+.numbers__window__digit--1 {
+  animation-iteration-count: 3;
+}
+.numbers__window__digit--2 {
+  animation-iteration-count: 6;
+}
+.numbers__window__digit--3 {
+  animation-iteration-count: 9;
+}
+.numbers__window__digit--4 {
+  animation-iteration-count: 12;
 }
 
+.teste {
+display: flex;
+width: 100%;
+}
+.numbers p {
+    color: #124265;
+    font-size: 16px;
+  margin: 0;
+}
 </style>
 
 <section class="main">
-    <div class="center">
-        <div class="main__cta">
-            
-            <h2>Primeiro Repositório de Dados Abertos da Região Norte</h2>
-            <p>Dados de Pesquisas da Região Amazonica</p>
-            <a href="dataverse/root">DataVerse</a>
+  <div class="center">
+    <div class="main__cta">
+      <div class="content">
+        <div class="content__container">
+          <ul class="content__container__list">
+            <li class="content__container__list__item">Seguro</li>
+            <li class="content__container__list__item">Confiável</li>
+            <li class="content__container__list__item">100% aberto</li>
+            <li class="content__container__list__item">da região norte</li>
+          </ul>
         </div>
-        
+      </div>
+      <h2>Primeiro Repositório de Dados Abertos da Região Norte</h2>
+
+      <p>Dados de Pesquisas da Região Amazonica</p>
+      <a href="dataverse/root">DataVerse</a>
     </div>
-    <div class="diferenciais">
-        <div class="diferencial-single">
-            <img src="/logo-ciencias.png" alt="">
-            <h2>Ciencias Biológicas</h2>
-            <p>Dados de pesquisa sobre a reprodução de primatas</p>
-            
-        </div>
-        <div class="diferencial-single">
-            <img src="/logo-carto.png" alt="">
-            <h2>Geotecnologia Aplicada</h2>
-            <p>Dados de pesquisa sobre Geometria</p>
-            
-        </div>
-        <div class="diferencial-single">
-            <img src="/logo-agro.png" alt="">
-            <h2>Agronomia</h2>
-            <p>Dados de pesquisa sobre o plantio de hortaliças </p>
-            
-        </div>
-        <div class="diferencial-single">
-            <img src="/logo-comp.png" alt="">
-            <h2>Tecnologia da Informação</h2>
-            <p>Dados de pesquisa sobre programação</p>
-            
-        </div>
+  </div>
+  <div class="diferenciais">
+    <div class="diferencial-single">
+      <img src="./logo-ciencias.png" alt="ciencias biológicas" />
+      <h2>Ciencias Biológicas</h2>
+      <p>Dados de pesquisa sobre a reprodução de primatas</p>
     </div>
+    <div class="diferencial-single">
+      <img src="./logo-carto.png" alt="" />
+      <h2>Geotecnologia Aplicada</h2>
+      <p>Dados de pesquisa sobre Geometria</p>
+    </div>
+    <div class="diferencial-single">
+      <img src="./logo-agro.png" alt="" />
+      <h2>Agronomia</h2>
+      <p>Dados de pesquisa sobre o plantio de hortaliças</p>
+    </div>
+    <div class="diferencial-single">
+      <img src="./logo-comp.png" alt="" />
+      <h2>Tecnologia da Informação</h2>
+      <p>Dados de pesquisa sobre programação</p>
+    </div>
+  </div>
 </section>
 
 <section class="sobre">
-    <div class="center">
-        <div class="chamada-sobre">
-            <h2>Porque utilizar o DataVerse?</h2>
-            <p>Dados Abertos constituem a publicação e disseminação de dados e informações públicas na Web, seguindo alguns critérios que possibilitam sua reutilização e o desenvolvimento de aplicativos por toda a sociedade. A maior parte dos dados e informações geradas ou mantidas pelo governo, são públicas. Disponibilizar dados na Web não é uma prática recente no governo, porém com uma política de dados abertos, o governo sinaliza que pretende padronizar e alavancar a disseminação de dados públicos por todos os órgãos. O paradigma de dados abertos está fundamentado na constatação de que o dado, quando compartilhado abertamente, tem seu valor e seu uso potencializados. Com isso o governo pretende desenvolver um ecossistema de dados e informações que beneficia a sociedade e possibilita o envolvimento de todos seus setores, inclusive a iniciativa privada, o setor acadêmico e o próprio governo.</p>
-        </div>
-        
+  <div class="center">
+    <div class="chamada-sobre">
+      <h2>Porque utilizar o DataVerse?</h2>
+      <p>
+        Dados Abertos constituem a publicação e disseminação de dados e
+        informações públicas na Web, seguindo alguns critérios que possibilitam
+        sua reutilização e o desenvolvimento de aplicativos por toda a
+        sociedade. A maior parte dos dados e informações geradas ou mantidas
+        pelo governo, são públicas. Disponibilizar dados na Web não é uma
+        prática recente no governo, porém com uma política de dados abertos, o
+        governo sinaliza que pretende padronizar e alavancar a disseminação de
+        dados públicos por todos os órgãos. O paradigma de dados abertos está
+        fundamentado na constatação de que o dado, quando compartilhado
+        abertamente, tem seu valor e seu uso potencializados. Com isso o governo
+        pretende desenvolver um ecossistema de dados e informações que beneficia
+        a sociedade e possibilita o envolvimento de todos seus setores,
+        inclusive a iniciativa privada, o setor acadêmico e o próprio governo.
+      </p>
     </div>
+  </div>
 </section>
 
-<section class="conquistas">
-    <div class="center">
-        <div class="conquista-single">
-            <h2>+ 100</h2>
-            <p>Pesquisas sobre o desmatamento</p>
-        </div>
-        <div class="conquista-single">
-            <h2>+ 30 </h2>
-            <p>Pesquisas sobre a agricutura familiar</p>
-        </div>
-        <div class="conquista-single">
-            <h2>+ 50</h2>
-            <p>Pesquisas sobe Tecnologia da informação</p>
-        </div>
-        <div class="conquista-single">
-            <h2>+ 25</h2>
-            <p>Pesquisas sobre inclusão</p>
-        </div>
+<!-- <section class="conquistas">
+  <div class="center">
+    <div class="conquista-single">
+      <h2>+ 100</h2>
+      <p>Pesquisas sobre o desmatamento</p>
     </div>
+    <div class="conquista-single">
+      <h2>+ 30</h2>
+      <p>Pesquisas sobre a agricutura familiar</p>
+    </div>
+    <div class="conquista-single">
+      <h2>+ 50</h2>
+      <p>Pesquisas sobe Tecnologia da informação</p>
+    </div>
+    <div class="conquista-single">
+      <h2>+ 25</h2>
+      <p>Pesquisas sobre inclusão</p>
+    </div>
+  </div>
+  </section> -->
+
+<section class="conquistas">
+<div class="teste">
+<div class="numbers">
+    <div style="color: #124265; font-weight: bold;">
+    + <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">1</span>
+    </span>
+    <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--2" data-fake="0121565678">0</span>
+    </span>
+    <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--3" data-fake="8395216407">0</span>
+    </span>
+</div>
+<p style="line-height: 20px;">Pesquisas sobre o desmatamento</p>
+</div>
+<div class="numbers">
+    <div style="color: #124265; font-weight: bold;">
+    + <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">3</span>
+    </span>
+    <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--2" data-fake="078740648">0</span>
+    </span>
+</div>
+<p style="line-height: 20px;">Pesquisas sobre a agricultura familiar</p>
+</div>
+<div class="numbers">
+    <div style="color: #124265; font-weight: bold;">
+    + <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">5</span>
+    </span>
+    <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--2" data-fake="0996741650">0</span>
+    </span>
+</div>
+<p style="line-height: 20px;">Pesquisas sobre Tecnologia da Informação</p>
+</div>
+<div class="numbers">
+    <div style="color: #124265; font-weight: bold;">
+    + <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--1" data-fake="8642519073">2</span>
+    </span>
+    <span class="numbers__window">
+        <span class="numbers__window__digit numbers__window__digit--2" data-fake="5207186394">5</span>
+    </span>
+</div>
+<p style="line-height: 20px;">Pesquisas sobre inclusão</p>
+</div>
+</div>
 </section>
