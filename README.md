@@ -11,12 +11,15 @@
 #3ba347
 
 # Transições
-zoom button
+[X]zoom button
 
 # Acessibilidade
 *Leitor libras (VLibras)*
-*Aumentar tamanho de fonte (Ex: A+ A-)*
+
+[X]*Aumentar tamanho de fonte (Ex: A+ A-)*
+
 *Algo para quem tem problemas com claridade*
+
 *leitor de tela para cegos*
 
 # Divisões na pagina

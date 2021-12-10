@@ -107,6 +107,7 @@
   }
 
   section.sobre {
+    background-color: rgb(255, 255, 255);
     padding: 80px 0;
   }
 
@@ -345,9 +346,59 @@
       transform: translate3d(0, -25%, 0);
     }
   }
+/* vantagens */
+section.vantagens-all {
+    background-color: rgb(249, 255, 249);
+    padding: 30px 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .ajust {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vantagens {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .beneficios h2 {
+    text-transform: uppercase;
+    color: #124265;
+    text-align: center;
+    font-size: 50px;
+    padding: 2% 0;
+  }
+
+  .vantagens-single{
+    background-color: white;
+    border: 1px solid rgba(0,79,9,0.5);
+border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    text-align: center;
+  }
+
+  .vantagens-single img{
+    max-width: 30%;
+    max-height: 30%;
+    margin: 10px;
+    display: inline-flex;
+  }
 
  /* contador */
-
  .numbers {
   /* font-family: 'Arial', sans-serif; */
   font-size: 30px;
@@ -501,9 +552,44 @@ width: 100%;
   </div>
 </section>
 
+<section class="vantagens-all">
+
+  <div class="beneficios">
+    <h2>Benefícios</h2>
+  </div>
+
+<div class="ajust">
+  <div class="vantagens">
+    <div class="vantagens-single">
+      <img src="./icons/1.png" alt="" />
+      <h3>Processo de investigação facilitado</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="./icons/2.png" alt="" />
+      <h3>Salvaguardar os dados</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="./icons/3.png" alt="" />
+      <h3>Partilhar para reutilização</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="./icons/4.png" alt="" />
+      <h3>Obtenção de créditos</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="./icons/5.png" alt="" />
+      <h3>Evitar acusações de fraude ou má ciência</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="./icons/6.png" alt="" />
+      <h3>Cumpriri com os requisitos de financiadores</h3>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="sobre">
   <div class="center">
-    
     <div class="chamada-sobre">
       <h2>Porque utilizar o DataVerse?</h2>
       <p class=teste-zoom>
