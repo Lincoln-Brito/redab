@@ -121,6 +121,10 @@
     margin-bottom: 5%;
   }
 
+  .chamada-sobre p {
+    text-align: left;
+  }
+
   .conteudo-sobre {
     display: flex;
     flex-wrap: wrap;
@@ -134,7 +138,7 @@
   }
 
   section.conquistas {
-    background-color: #f8fbfe;
+    background-color: rgb(245, 253, 245);
     padding: 20px 0;
   }
 
@@ -405,7 +409,54 @@ width: 100%;
     font-size: 16px;
   margin: 0;
 }
+.accessibility {
+  height: 4%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+.menu {
+  width: 97%;
+  height: 100%;
+}
+.font-button
+        {
+            height: 50px;
+            width: 35px;
+            display: inline-block;
+            color: rgb(59, 59, 59);
+            text-align: center;
+            line-height: 35px;
+            font-size: 15pt;
+            cursor: pointer;
+        }
+
 </style>
+<!-- zoom -->
+<!-- para atribuir zoom usar: class="teste-zoom" -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('.teste-zoom').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('.teste-zoom').css("font-size", size);
+            });
+        });
+    </script>
+<section class="accessibility">
+  <div class="menu">
+    <a class="font-button plus">A+</a> <a class="font-button minus">A-</a>
+  </div>
+</section>
 
 <section class="main">
   <div class="center">
@@ -452,24 +503,29 @@ width: 100%;
 
 <section class="sobre">
   <div class="center">
+    
     <div class="chamada-sobre">
       <h2>Porque utilizar o DataVerse?</h2>
-      <p>
+      <p class=teste-zoom>
         Dados Abertos constituem a publicação e disseminação de dados e
         informações públicas na Web, seguindo alguns critérios que possibilitam
         sua reutilização e o desenvolvimento de aplicativos por toda a
         sociedade. A maior parte dos dados e informações geradas ou mantidas
-        pelo governo, são públicas. Disponibilizar dados na Web não é uma
-        prática recente no governo, porém com uma política de dados abertos, o
-        governo sinaliza que pretende padronizar e alavancar a disseminação de
-        dados públicos por todos os órgãos. O paradigma de dados abertos está
-        fundamentado na constatação de que o dado, quando compartilhado
+        pelo governo, são públicas.
+      </br>
+        <br>
+        <p class="teste-zoom">
+        Disponibilizar dados na Web não é uma prática recente no governo, porém
+        com uma política de dados abertos, o governo sinaliza que pretende padronizar
+        e alavancar a disseminação de dados públicos por todos os órgãos. O paradigma 
+        de dados abertos está fundamentado na constatação de que o dado, quando compartilhado
         abertamente, tem seu valor e seu uso potencializados. Com isso o governo
         pretende desenvolver um ecossistema de dados e informações que beneficia
         a sociedade e possibilita o envolvimento de todos seus setores,
         inclusive a iniciativa privada, o setor acadêmico e o próprio governo.
       </p>
     </div>
+   
   </div>
 </section>
 
