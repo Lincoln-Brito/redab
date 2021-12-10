@@ -11,17 +11,22 @@
 #3ba347
 
 # Transições
-[X]zoom button
+- [X] zoom button
 
 # Acessibilidade
-*Leitor libras (VLibras)*
+- [ ] *Leitor libras (VLibras)*
 
-[X]*Aumentar tamanho de fonte (Ex: A+ A-)*
+- [X] *Aumentar tamanho de fonte (Ex: A+ A-)*
 
-*Algo para quem tem problemas com claridade*
+- [ ] *Algo para quem tem problemas com claridade*
 
-*leitor de tela para cegos*
+- [ ] *leitor de tela para cegos*
 
 # Divisões na pagina
 
 # Identidade Visual
+
+# Resolver problemas
+- [ ] adicionar zoom a contador sem quebrar
+
+- [ ] ver responsividade de cards
