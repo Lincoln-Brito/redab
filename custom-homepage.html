@@ -11,17 +11,17 @@
     margin: 0 auto;
     padding: 0 2%;
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
   }
 
   section.main {
-    background-image: url('/bg_gif.gif');
+    background-image: url('/Fundo.png');
     background-color: #c2f0c7;
     padding: 30px 0;
     background-position: center;
     background-size: cover;
-    /* background-repeat: no-repeat;  */
-    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .main__cta {
@@ -39,7 +39,7 @@
   .main__cta p {
     font-size: 19px;
     font-weight: bold;
-    color: #16507b;
+    color: #000000;
     margin: 15px 10px;
     padding: 20px 10px;
   }
@@ -106,31 +106,49 @@
     line-height: 30px;
   }
 
-  section.sobre {
-    padding: 80px 0;
+  section.vantagens-all {
+    background-color: #f8fbfe;
+    padding: 30px 0;
+    background-position: center;
+    background-size: cover;
   }
 
-  .chamada-sobre {
-    width: 100%;
-    text-align: center;
-  }
-
-  .chamada-sobre h2 {
-    color: #124265;
-    text-transform: uppercase;
-    margin-bottom: 5%;
-  }
-
-  .conteudo-sobre {
+  .ajust {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1%;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .conteudo-sobre p {
-    width: 48%;
-    font-size: 14px;
-    color: rgb(79, 99, 82);
-    margin-right: 2%;
+  .vantagens {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .beneficios h2 {
+    text-transform: uppercase;
+    color: #004f09;
+    text-align: center;
+    font-size: 50px;
+    padding: 2% 2%;
+  }
+
+  .vantagens-single{
+    background-color: white;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 2%;
+    padding: 20px 20px;
+    text-align: center;
+  }
+
+  .vantagens-single img{
+    max-width: 30%;
+    max-height: 30%;
+    margin: 10px;
+    display: inline-flex;
   }
 
   section.conquistas {
@@ -492,27 +510,40 @@ width: 100%;
   </div>
 </section>
 
-<section class="sobre">
-  <div class="center">
-    <div class="chamada-sobre">
-      <h2>Porque utilizar o DataVerse?</h2>
-      <p>
-        Dados Abertos constituem a publicação e disseminação de dados e
-        informações públicas na Web, seguindo alguns critérios que possibilitam
-        sua reutilização e o desenvolvimento de aplicativos por toda a
-        sociedade. A maior parte dos dados e informações geradas ou mantidas
-        pelo governo, são públicas. Disponibilizar dados na Web não é uma
-        prática recente no governo, porém com uma política de dados abertos, o
-        governo sinaliza que pretende padronizar e alavancar a disseminação de
-        dados públicos por todos os órgãos. O paradigma de dados abertos está
-        fundamentado na constatação de que o dado, quando compartilhado
-        abertamente, tem seu valor e seu uso potencializados. Com isso o governo
-        pretende desenvolver um ecossistema de dados e informações que beneficia
-        a sociedade e possibilita o envolvimento de todos seus setores,
-        inclusive a iniciativa privada, o setor acadêmico e o próprio governo.
-      </p>
+<section class="vantagens-all">
+
+  <div class="beneficios">
+    <h2>Benefícios</h2>
+  </div>
+
+<div class="ajust">
+  <div class="vantagens">
+    <div class="vantagens-single">
+      <img src="/icons/1.png" alt="" />
+      <h3>Processo de investigação facilitado</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="/icons/2.png" alt="" />
+      <h3>Salvaguardar os dados</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="/icons/3.png" alt="" />
+      <h3>Partilhar para reutilização</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="/icons/4.png" alt="" />
+      <h3>Obtenção de créditos</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="/icons/5.png" alt="" />
+      <h3>Evitar acusações de fraude ou má ciência</h3>
+    </div>
+    <div class="vantagens-single">
+      <img src="/icons/6.png" alt="" />
+      <h3>Cumpriri com os requisitos de financiadores</h3>
     </div>
   </div>
+</div>
 </section>
 
 <section class="conquistas">
