@@ -159,6 +159,58 @@
       margin: 20px 20px;
     }
   }
+
+  /* Texto principal  */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* background-color: #000; */
+  color: rgb(0, 0, 0);
+}
+.container {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container p {
+  text-transform: uppercase;
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.container p span.typed-text {
+  font-weight: normal;
+  font-weight: bold;
+  color: #004f09;
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: rgb(0, 0, 0);
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: rgb(0, 0, 0); }
+  49% { background-color: rgb(0, 0, 0); }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: rgb(0, 0, 0); }
+}
+
   /* animação */
   .content {
     position: absolute;
@@ -410,19 +462,9 @@ width: 100%;
 <section class="main">
   <div class="center">
     <div class="main__cta">
-      <div class="content">
-        <div class="content__container">
-          <ul class="content__container__list">
-            <li class="content__container__list__item">Seguro</li>
-            <li class="content__container__list__item">Confiável</li>
-            <li class="content__container__list__item">100% aberto</li>
-            <li class="content__container__list__item">da região norte</li>
-          </ul>
-        </div>
+      <div class="container">
+        <p>Repositório de Dados Abertos <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
       </div>
-      <h2>Primeiro Repositório de Dados Abertos da Região Norte</h2>
-
-      <p>Dados de Pesquisas da Região Amazonica</p>
       <a href="dataverse/root">DataVerse</a>
     </div>
   </div>
@@ -472,27 +514,6 @@ width: 100%;
     </div>
   </div>
 </section>
-
-<!-- <section class="conquistas">
-  <div class="center">
-    <div class="conquista-single">
-      <h2>+ 100</h2>
-      <p>Pesquisas sobre o desmatamento</p>
-    </div>
-    <div class="conquista-single">
-      <h2>+ 30</h2>
-      <p>Pesquisas sobre a agricutura familiar</p>
-    </div>
-    <div class="conquista-single">
-      <h2>+ 50</h2>
-      <p>Pesquisas sobe Tecnologia da informação</p>
-    </div>
-    <div class="conquista-single">
-      <h2>+ 25</h2>
-      <p>Pesquisas sobre inclusão</p>
-    </div>
-  </div>
-  </section> -->
 
 <section class="conquistas">
 <div class="teste">
@@ -545,3 +566,47 @@ width: 100%;
 </div>
 </div>
 </section>
+
+<script>
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
+  
+  const textArray = ["Seguro", "Gratuito", "de Qualidade", "Aberto"];
+  const typingDelay = 200;
+  const erasingDelay = 100;
+  const newTextDelay = 2000; // Delay between current and next text
+  let textArrayIndex = 0;
+  let charIndex = 0;
+  
+  function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+      if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
+    } 
+    else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newTextDelay);
+    }
+  }
+  
+  function erase() {
+    if (charIndex > 0) {
+      if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    } 
+    else {
+      cursorSpan.classList.remove("typing");
+      textArrayIndex++;
+      if(textArrayIndex>=textArray.length) textArrayIndex=0;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+    if(textArray.length) setTimeout(type, newTextDelay + 250);
+  });
+  </script>
