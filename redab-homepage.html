@@ -1,108 +1,162 @@
 <style>
-    /* Custom CSS for the custom homepage... */
-    * {font-family: "Poppins", sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      }
+  /* Custom CSS for the custom homepage... */
+  * {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    .center {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 2%;
-    }
+  .center {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+  }
 
+  .root {
+    width: 100%;
+    /* height: 100%; */
+    /* background: pink; */
+  }
+
+  .principal {
+    background-image: url('/bg_gif.gif');
+    background-color: #c2f0c7;
+    padding: 30px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-direction: row;
+  }
+
+  @media (min-width:1330px) {
     .principal {
-      background-image: url('/bg_gif.gif');
-      background-color: #c2f0c7;
-      padding: 30px 0;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      flex-direction: row;
+      justify-content: center;
     }
-    @media (min-width:1330px) {
-    .principal {
-        justify-content: center;
-    }
-}
+  }
 
-    .principalA {
-      width: 100%;
-      margin: 60px 0;
-      text-align: center;
-    }
+  .principalA {
+    width: 100%;
+    margin: 60px 0;
+    text-align: center;
+  }
 
-    .principalA h2 {
-      text-align: left;
-      color: #16507b;
-      font-size: 40px;
-    }
+  .principalA h2 {
+    text-align: left;
+    color: #16507b;
+    font-size: 40px;
+  }
 
-    .principalA a {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: bold;
-      background-color: #009211;
-      line-height: 32px;
-      display: inline-block;
-      padding: 8px 30px;
-      color: white;
-      font-size: 20px;
-      border-radius: 7px;
-      cursor: pointer;
-      height: 50px;
-      width: 180px;
-    }
+  .principalA a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #009211;
+    line-height: 32px;
+    display: inline-block;
+    padding: 8px 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+  }
 
-    .principalA a:hover {
-      background-color: #004f09;
-      color: white;
-      transition: 0.6s;
-    }
+  .principalA a:hover {
+    background-color: #004f09;
+    color: white;
+    transition: 0.6s;
+  }
 
-    .diferenciais {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  .diferenciais {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .diferencial-single {
-      border-radius: 8px;
-      background-color: white;
-      height: 260px;
-      width: 21%;
-      margin-right: 2%;
-      margin-left: 2%;
-      padding: 20px 20px;
-      text-align: center;
-    }
+  .diferencial-single {
+    border-radius: 8px;
+    background-color: white;
+    height: 260px;
+    width: 21%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding: 20px 20px;
+    text-align: center;
+  }
 
-    .diferencial-single:hover {
-      cursor: pointer;
-      font-size: 110%;
-      transition: 0.4s;
-    }
+  .diferencial-single:hover {
+    cursor: pointer;
+    font-size: 110%;
+    transition: 0.4s;
+  }
 
-    .diferencial-single img {
-      max-width: 30%;
-      max-height: 30%;
-      margin: 10px;
-      display: inline-flex;
-    }
+  .diferencial-single img {
+    max-width: 30%;
+    max-height: 30%;
+    margin: 10px;
+    display: inline-flex;
+  }
 
-    .diferencial-single h2 {
-      color: #124265;
-      margin: 10px 0;
-    }
+  .diferencial-single h2 {
+    color: #124265;
+    margin: 10px 0;
+  }
 
-    .diferencial-single h3 {
-      font-size: 17px;
-      color: gray;
-      line-height: 20px;
-    }
+  .diferencial-single h3 {
+    font-size: 17px;
+    color: gray;
+    line-height: 20px;
+  }
 
-      /* Texto principal  */
+  .vantagens-all {
+    background-color: #f8fbfe;
+    padding: 30px 0;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .beneficios h2 {
+    text-transform: uppercase;
+    color: #004f09;
+    text-align: center;
+    font-size: 50px;
+    padding: 2% 2%;
+  }
+
+  .ajust {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vantagens {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vantagens-single {
+    background-color: #c2f0c7;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: 2%;
+    padding: 20px 20px;
+    text-align: center;
+  }
+
+  .vantagens-single img {
+    max-width: 30%;
+    max-height: 30%;
+    margin: 10px;
+    display: inline-flex;
+  }
+
+
+  /* Texto principal  */
   @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
@@ -112,6 +166,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .container h1 {
     text-transform: uppercase;
     font-size: 3rem;
@@ -122,11 +177,13 @@
     margin-bottom: 60px;
     margin-left: -100px;
   }
+
   .container h1 span.typed-text {
     font-weight: normal;
     font-weight: bold;
     color: #004f09;
   }
+
   .container h1 span.cursor {
     display: inline-block;
     background-color: rgb(0, 0, 0);
@@ -134,307 +191,403 @@
     width: 3px;
     animation: blink 1s infinite;
   }
+
   .container h1 span.cursor.typing {
     animation: none;
   }
+
   @keyframes blink {
-    0%  { background-color: rgb(0, 0, 0); }
-    49% { background-color: rgb(0, 0, 0); }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
-    100%  { background-color: rgb(0, 0, 0); }
+    0% {
+      background-color: rgb(0, 0, 0);
+    }
+
+    49% {
+      background-color: rgb(0, 0, 0);
+    }
+
+    50% {
+      background-color: transparent;
+    }
+
+    99% {
+      background-color: transparent;
+    }
+
+    100% {
+      background-color: rgb(0, 0, 0);
+    }
   }
 
-/* Animação de digitação */
-    .content {
-      position: absolute;
-      margin: -12px 0 0 55px;
-      transform: translate(-50%, -50%);
-      /* height: 160px; */
-      overflow: hidden;
-      font-size: 30px;
-      line-height: 40px;
-      color: #004f09;
-    }
-    .content__container {
-      font-weight: 600;
-      overflow: hidden;
-      height: 40px;
-      padding: 0 40px;
-    }
-    .content__container__text {
-      display: inline;
-      float: left;
-      margin: 0;
-    }
-    .content__container__list {
-      margin-top: 0;
-      padding-left: 110px;
-      text-align: left;
-      list-style: none;
-      -webkit-animation-name: change;
-      -webkit-animation-duration: 10s;
-      -webkit-animation-iteration-count: infinite;
-      animation-name: change;
-      animation-duration: 10s;
-      animation-iteration-count: infinite;
-    }
-    .content__container__list__item {
-      line-height: 40px;
-      margin: 0;
-    }
-    @-webkit-keyframes opacity {
-      0%,
-      100% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-    @-webkit-keyframes change {
-      0%,
-      12.66%,
-      100% {
-        transform: translate3d(0, 0, 0);
-      }
-      16.66%,
-      29.32% {
-        transform: translate3d(0, -25%, 0);
-      }
-      33.32%,
-      45.98% {
-        transform: translate3d(0, -50%, 0);
-      }
-      49.98%,
-      62.64% {
-        transform: translate3d(0, -75%, 0);
-      }
-      66.64%,
-      79.3% {
-        transform: translate3d(0, -50%, 0);
-      }
-      83.3%,
-      95.96% {
-        transform: translate3d(0, -25%, 0);
-      }
-    }
-    @-o-keyframes opacity {
-      0%,
-      100% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-    @-o-keyframes change {
-      0%,
-      12.66%,
-      100% {
-        transform: translate3d(0, 0, 0);
-      }
-      16.66%,
-      29.32% {
-        transform: translate3d(0, -25%, 0);
-      }
-      33.32%,
-      45.98% {
-        transform: translate3d(0, -50%, 0);
-      }
-      49.98%,
-      62.64% {
-        transform: translate3d(0, -75%, 0);
-      }
-      66.64%,
-      79.3% {
-        transform: translate3d(0, -50%, 0);
-      }
-      83.3%,
-      95.96% {
-        transform: translate3d(0, -25%, 0);
-      }
-    }
-    @-moz-keyframes opacity {
-      0%,
-      100% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-    @-moz-keyframes change {
-      0%,
-      12.66%,
-      100% {
-        transform: translate3d(0, 0, 0);
-      }
-      16.66%,
-      29.32% {
-        transform: translate3d(0, -25%, 0);
-      }
-      33.32%,
-      45.98% {
-        transform: translate3d(0, -50%, 0);
-      }
-      49.98%,
-      62.64% {
-        transform: translate3d(0, -75%, 0);
-      }
-      66.64%,
-      79.3% {
-        transform: translate3d(0, -50%, 0);
-      }
-      83.3%,
-      95.96% {
-        transform: translate3d(0, -25%, 0);
-      }
-    }
-    @keyframes opacity {
-      0%,
-      100% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-    }
-    @keyframes change {
-      0%,
-      12.66%,
-      100% {
-        transform: translate3d(0, 0, 0);
-      }
-      16.66%,
-      29.32% {
-        transform: translate3d(0, -25%, 0);
-      }
-      33.32%,
-      45.98% {
-        transform: translate3d(0, -50%, 0);
-      }
-      49.98%,
-      62.64% {
-        transform: translate3d(0, -75%, 0);
-      }
-      66.64%,
-      79.3% {
-        transform: translate3d(0, -50%, 0);
-      }
-      83.3%,
-      95.96% {
-        transform: translate3d(0, -25%, 0);
-      }
+  /* Animação de digitação */
+  .content {
+    position: absolute;
+    margin: -12px 0 0 55px;
+    transform: translate(-50%, -50%);
+    /* height: 160px; */
+    overflow: hidden;
+    font-size: 30px;
+    line-height: 40px;
+    color: #004f09;
+  }
+
+  .content__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 40px;
+  }
+
+  .content__container__text {
+    display: inline;
+    float: left;
+    margin: 0;
+  }
+
+  .content__container__list {
+    margin-top: 0;
+    padding-left: 110px;
+    text-align: left;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+
+  .content__container__list__item {
+    line-height: 40px;
+    margin: 0;
+  }
+
+  @-webkit-keyframes opacity {
+
+    0%,
+    100% {
+      opacity: 0;
     }
 
+    50% {
+      opacity: 1;
+    }
+  }
 
+  @-webkit-keyframes change {
+
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+
+  @-o-keyframes opacity {
+
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes change {
+
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+
+  @-moz-keyframes opacity {
+
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes change {
+
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+
+  @keyframes opacity {
+
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes change {
+
+    0%,
+    12.66%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    16.66%,
+    29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+
+    33.32%,
+    45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    49.98%,
+    62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+
+    66.64%,
+    79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    83.3%,
+    95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
 </style>
+<div class="root">
+  <div class="principal">
 
-<div class="principal">
-
-<!--Título-->
+    <!--Título-->
     <div class="center">
-        <div class="principalA">
-          <div class="container">
-            <h1>Repositório de Dados 
-                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
-            </h1>
-          </div>
-
-<!--Botão "DataVerse"-->
-        <a href="/dataverse/redab">DataVerse</a>
+      <div class="principalA">
+        <div class="container">
+          <h1>Repositório de Dados
+            <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+          </h1>
         </div>
+
+        <!--Botão "DataVerse"-->
+        <a href="/dataverse/redab">DataVerse</a>
+      </div>
     </div>
 
-<!--Dataverse's em destaque-->
-  <div class="diferenciais">
+    <!--Dataverse's em destaque-->
+    <div class="diferenciais">
       <div class="diferencial-single">
         <a href="/dataverse/ispa" style="text-decoration: none;">
           <img src="./logo-ciencias.png" alt="Ciencias biológicas" />
-            <h2>Ciencias Biológicas</h2>
-              <h3>Dados de pesquisa sobre a reprodução de primatas</h3>
+          <h2>Ciencias Biológicas</h2>
+          <h3>Dados de pesquisa sobre a reprodução de primatas</h3>
         </a>
       </div>
       <div class="diferencial-single">
         <a href="" style="text-decoration: none;">
           <img src="./genetica.png" alt="Genética Aplicada" />
-            <h2>Genética Aplicada</h2>
-              <h3>Dados de pesquisa sobre genética de espécies animais e vegetais</h3>
+          <h2>Genética Aplicada</h2>
+          <h3>Dados de pesquisa sobre genética de espécies animais e vegetais</h3>
         </a>
       </div>
       <div class="diferencial-single">
         <a href="" style="text-decoration: none;">
           <img src="./logo-agro.png" alt="Agronomia" />
-            <h2>Agronomia</h2>
-              <h3>Dados de pesquisa sobre o plantio de hortaliças</h3>
-      </a>
+          <h2>Agronomia</h2>
+          <h3>Dados de pesquisa sobre o plantio de hortaliças</h3>
+        </a>
       </div>
       <div class="diferencial-single">
         <a href="" style="text-decoration: none;">
           <img src="./logo-comp.png" alt="Computação" />
-            <h2>Tecnologia da Informação</h2>
-              <h3>Dados de pesquisa sobre programação</h3>
-      </a>
+          <h2>Tecnologia da Informação</h2>
+          <h3>Dados de pesquisa sobre programação</h3>
+        </a>
       </div>
+    </div>
+
   </div>
+
+  <div class="vantagens-all">
+
+    <div class="beneficios">
+      <h2>Benefícios</h2>
+    </div>
+
+    <div class="ajust">
+      <div class="vantagens">
+        <div class="vantagens-single">
+          <img src="/icons/1.png" alt="" />
+          <h3>Processo de investigação facilitado</h3>
+        </div>
+        <div class="vantagens-single">
+          <img src="/icons/2.png" alt="" />
+          <h3>Salvaguardar os dados</h3>
+        </div>
+        <div class="vantagens-single">
+          <img src="/icons/3.png" alt="" />
+          <h3>Partilhar para reutilização</h3>
+        </div>
+        <div class="vantagens-single">
+          <img src="/icons/4.png" alt="" />
+          <h3>Obtenção de créditos</h3>
+        </div>
+        <div class="vantagens-single">
+          <img src="/icons/5.png" alt="" />
+          <h3>Evitar acusações de fraude ou má ciência</h3>
+        </div>
+        <div class="vantagens-single">
+          <img src="/icons/6.png" alt="" />
+          <h3>Cumpriri com os requisitos de financiadores</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </div>
 
-
 <!--Vlibras-->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
   </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
 
 <!--Animação de digitação-->
 <script>
-    const typedTextSpan = document.querySelector(".typed-text");
-    const cursorSpan = document.querySelector(".cursor");
+  const typedTextSpan = document.querySelector(".typed-text");
+  const cursorSpan = document.querySelector(".cursor");
 
-    const textArray = ["Abertos", "Gratuitos", "Com qualidade", "Com segurança"];
-    const typingDelay = 200;
-    const erasingDelay = 100;
-    const newTextDelay = 2000; // Delay between current and next text
-    let textArrayIndex = 0;
-    let charIndex = 0;
+  const textArray = ["Abertos", "Gratuitos", "Com qualidade", "Com segurança"];
+  const typingDelay = 200;
+  const erasingDelay = 100;
+  const newTextDelay = 2000; // Delay between current and next text
+  let textArrayIndex = 0;
+  let charIndex = 0;
 
-    function type() {
-      if (charIndex < textArray[textArrayIndex].length) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, typingDelay);
-      }
-      else {
-        cursorSpan.classList.remove("typing");
-        setTimeout(erase, newTextDelay);
-      }
+  function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+      if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingDelay);
     }
-
-    function erase() {
-      if (charIndex > 0) {
-        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-        charIndex--;
-        setTimeout(erase, erasingDelay);
-      }
-      else {
-        cursorSpan.classList.remove("typing");
-        textArrayIndex++;
-        if(textArrayIndex>=textArray.length) textArrayIndex=0;
-        setTimeout(type, typingDelay + 1100);
-      }
+    else {
+      cursorSpan.classList.remove("typing");
+      setTimeout(erase, newTextDelay);
     }
+  }
 
-    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-      if(textArray.length) setTimeout(type, newTextDelay + 250);
-    });
+  function erase() {
+    if (charIndex > 0) {
+      if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, erasingDelay);
+    }
+    else {
+      cursorSpan.classList.remove("typing");
+      textArrayIndex++;
+      if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+      setTimeout(type, typingDelay + 1100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+    if (textArray.length) setTimeout(type, newTextDelay + 250);
+  });
 </script>
